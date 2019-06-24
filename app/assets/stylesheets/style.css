@@ -1,0 +1,31 @@
+.top_image {
+    background: url('/images/top_image2.jpg');
+    background-size:cover;
+}
+.trans_back {
+    opacity: 0.7;
+}
+.top_space {
+    margin-top: 30px;
+}
+.bottom_space {
+    margin-bottom: 20px;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+.button_line form{
+    display: inline-block;
+}
+.favorite {
+    margin-right: 10px;
+}
+.glyphicon-star:before {
+    color: orange;
+=======
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+=======
+>>>>>>> origin/master
+}

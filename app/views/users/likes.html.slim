@@ -1,0 +1,46 @@
+.row
+aside.col-xs-4
+  .panel.panel-default
+    .panel-heading
+      h3.panel-title
+        = @user.name
+    .panel-body
+      | <img class="media-object img-rounded img-responsive" src="
+      = gravatar_url(@user, { size: 500 })
+      |" alt="">
+  = render 'relationships/follow_button', user: @user
+.col-xs-8
+  ul.nav.nav-tabs.nav-justified.bottom_space
+    | <li class="
+    = 'active' if current_page?(user_path(@user)) 
+    |">
+    = link_to user_path(@user) do 
+      |旅の栞 <span class="badge">
+      = @count_plans 
+      |</span>
+    |</li>
+    | <li class="
+    = 'active' if current_page?(followings_user_path(@user)) 
+    |">
+    = link_to followings_user_path(@user) do
+      |フォロー <span class="badge">
+      = @count_followings 
+      |</span>
+    |</li>
+    | <li class="
+    = 'active' if current_page?(followers_user_path(@user)) 
+    |">
+    = link_to followers_user_path(@user) do
+      |フォロワー <span class="badge">
+      = @count_followers 
+      |</span>
+    |</li>
+    | <li class="
+    = 'active' if current_page?(likes_user_path(@user)) 
+    |">
+    = link_to likes_user_path(@user) do
+      |お気に入り <span class="badge">
+      = @count_favoritings 
+      |</span>
+    |</li>
+  = render 'plans/plans', plans: @plans
